@@ -6,7 +6,7 @@ function binarySearch({ arr, target }) {
     let mid;
 
     while( left <= right) {
-        mid = Math.round((right - left) / 2) + left; // ((10 - 0 )/ 2 )+ 0
+        mid = Math.round((right - left) / 2) + left;
 
         if(target === arr[mid]) {
             return mid;
@@ -18,4 +18,4 @@ function binarySearch({ arr, target }) {
     }
 }
 
-console.log(binarySearch({ arr: numbersList, target: 4}));
+console.log(binarySearch({ arr: numbersList, target: 6}));
