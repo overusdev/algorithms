@@ -1,8 +1,8 @@
-const numbersList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numbersList = [-1, 6, 3, 8, 5, 12, 7, 2, 9, 10];
 
 function binarySearch({ arr, target }) {
     let left = 0;
-    let right = arr.length;
+    let right = arr.length - 1;
     let mid;
 
     while( left <= right) {
@@ -13,9 +13,10 @@ function binarySearch({ arr, target }) {
         } else if (target < arr[mid]) {
             right = mid - 1;
         } else {
-            left = mid - 1;
+            left = mid + 1;
         }
     }
+    return -1;
 }
 
-console.log(binarySearch({ arr: numbersList, target: 6}));
+console.log(binarySearch({ arr: numbersList, target: 22}));
